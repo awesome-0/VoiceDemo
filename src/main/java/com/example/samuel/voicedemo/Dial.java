@@ -82,6 +82,10 @@ public class Dial extends Fragment {
                     dialog.setMessage("Please wait while we make your call to " + numberToCall);
                     dialog.show();
                     dialog.setCanceledOnTouchOutside(false);
+                    /*
+                     TODO
+                    Change country Code
+                     */
                     CallNumber(numberToCall.replaceFirst("0","+234"));
                     PostToMyApi(redialNumber.getText().toString());
 
@@ -95,6 +99,10 @@ public class Dial extends Fragment {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+        /*
+         TODO
+        You can change number and configurations here
+         */
         String username = "ejiro4precious";
         String Number = "+23417006109";
         String apiKey   = "c888efe82543c002794e3d54935e6370cdada52209d72ed4447d5f8d9c3c17cd";
@@ -122,6 +130,10 @@ public class Dial extends Fragment {
 
     }
     private void PostToMyApi(String redialNum) {
+        /*
+         TODO
+       change callback Url to post the redial Number to
+         */
         String myUrl = "https://db7b4cc2.ngrok.io";
         Retrofit retrofit = new Retrofit.Builder().baseUrl(myUrl)
                 .addConverterFactory(GsonConverterFactory.create())

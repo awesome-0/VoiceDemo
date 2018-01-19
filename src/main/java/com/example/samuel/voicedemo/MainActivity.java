@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         Pager.setAdapter(adapter);
         tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(Pager);
+        /*
+         TODO
+       Massive UI changes needed, really busy with school work
+       didn't have time to properly architect it
+         */
 
     }
 

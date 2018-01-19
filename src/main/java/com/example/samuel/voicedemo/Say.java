@@ -80,6 +80,10 @@ public class Say extends Fragment {
                     dialog.setMessage("Please wait while we make your call to " + numberToCall);
                     dialog.show();
                     dialog.setCanceledOnTouchOutside(false);
+                    /*
+                    TODO
+                    change Country Code
+                     */
                     CallNumber(numberToCall.replaceFirst("0","+234"));
                     PostToMyApi(Word_Field.getText().toString());
 
@@ -92,6 +96,11 @@ public class Say extends Fragment {
     }
 
     private void PostToMyApi(String s) {
+
+        /*
+         TODO
+        change call back Url to post the typed message to
+         */
         String myUrl = "https://db7b4cc2.ngrok.io/";
         Retrofit retrofit = new Retrofit.Builder().baseUrl(myUrl)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -120,6 +129,10 @@ public class Say extends Fragment {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+        /*
+         TODO
+        You can change number and configurations here
+         */
         String username = "ejiro4precious";
         String Number = "+23417006109";
         String apiKey   = "c888efe82543c002794e3d54935e6370cdada52209d72ed4447d5f8d9c3c17cd";
