@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.samuel.voicedemo.Say">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:hint="Number to Dial e.g 08*"
+        android:inputType="number"
+        android:id="@+id/number_field"
+        android:paddingLeft="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/number_field"
+        android:layout_centerVertical="true"
+        android:id="@+id/button"
+        android:text="Call"/>
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_field"
+        android:layout_marginLeft="50dp"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:id="@+id/word_field"
+        android:hint="what should we say "/>
+
+
+</RelativeLayout>
